@@ -1,0 +1,805 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<style>
+@media screen and (max-width: 600px){
+  body, html {
+  height: 100%;
+  width: 100%;
+  overflow-x: visible;
+  background: -webkit-radial-gradient(circle, white, #ffb5ff);
+  }
+li {
+  display: inline;
+}
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+.navbar-purp {
+  background-color: #BB7BBB;
+  background-size: 50%;
+}
+.navbar-purp .navstyling {
+  color:white;
+  font-weight:bold;
+  text-shadow:2px 2px #070000;
+}
+.navbar-purp .navstyling:focus,
+.navbar-purp .navstyling:hover {
+  color: #E1D5EE;
+  background-color: rgba(0,0,0,0);
+}
+div.homebg {
+  background-image: url("lotus.jpeg");
+  height:100%;
+  position: relative;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+.dafoestyle {
+  position: absolute;
+  top:20%;
+  left:50%;
+  transform: translateX(-50%) translateY(-50%);
+  font-size: 70px;
+  color: #FF85FF;
+}
+.mrdafoe {
+  font-family: 'Mr Dafoe', cursive;
+}
+.roboto {
+  font-family: 'Roboto Slab', serif;
+}
+.titlebar {
+  display: block;
+  position: relative;
+  margin-top: 20%;
+  width: 75%;
+  height: 15%;
+  background-color: #FF85FF; 
+}
+.titlebar .titlestyling{
+  position: absolute;
+  top: 50%;
+  left: 20%;
+  transform: translateY(-50%);
+  color: white;
+  font-size: 30px;
+}
+.headermp {
+  font-size: 35px;
+}
+#stars5 {
+  height: 100px;
+  width: 350px;
+}
+.div {
+  display: -webkit-flex;
+  -webkit-align-items:center;
+  display: flex;
+  align-items: center;
+}
+.rowpad1 {
+  padding-top: 5%;
+}
+.rowpad2 {
+  padding-left: 3%;
+}
+.reviewbold {
+  font-weight: bold;
+  font-size: 98%;
+  padding-top: 1%;
+  padding-bottom: 2%;
+  text-align: center;
+}
+.reviewpara {
+  font-weight: bold;
+  font-size: 85%;
+  text-align: center;
+  padding-top: 3%;
+}
+.lotusOut {
+  border: 2px solid black;
+  border-radius: 50%;
+  height: 27px;
+  width: 45px;
+}
+.lotusborder {
+  border: 15px solid transparent;
+  padding: 20px;
+  border-image: url("purpleborder4.png") 33% round;
+  /*border-image-outset: 10px;*/
+}
+.carousel-content{
+  width: 30%;
+  margin: auto;
+  height: 250px;
+  color: black;
+  text-align:center;
+}
+.carousel-text {
+  padding-top: 75px;
+}
+.carousel-background {
+  margin-top: 175px;
+  position: absolute;
+  width: 100%;
+  background-size: fill;
+  background-image: url("lotus-flower.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+}
+}
+@media screen and (min-width: 600px){
+  body, html {
+  height: 100%;
+  width: 100%;
+  overflow-x: hidden;
+  background: -webkit-radial-gradient(circle, black, #ffb5ff);
+}
+li {
+  display: inline;
+}
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+.navbar-purp {
+  background-color: #BB7BBB;
+  background-size: 50%;
+}
+.navbar-purp .navstyling {
+  color:white;
+  font-weight:bold;
+  font-size: 12px;
+  text-shadow:2px 2px #070000;
+}
+.navbar-purp .navstyling:focus,
+.navbar-purp .navstyling:hover {
+  color: #E1D5EE;
+  background-color: rgba(0,0,0,0);
+}
+div.homebg {
+  background-image: url("lotus.jpeg");
+  height:100%;
+  position: relative;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+.dafoestyle {
+  position: absolute;
+  top:20%;
+  left:50%;
+  transform: translateX(-50%) translateY(-50%);
+  font-size: 70px;
+  color: #FF85FF;
+}
+.mrdafoe {
+  font-family: 'Mr Dafoe', cursive;
+}
+.roboto {
+  font-family: 'Roboto Slab', serif;
+}
+.titlebar {
+  display: block;
+  position: relative;
+  margin-top: 8%;
+  width: 85%;
+  height: 25%;
+  background-color: #FF85FF; 
+}
+.titlebar .titlestyling{
+
+  position: absolute;
+  top: 50%;
+  left: 28%;
+  transform: translateY(-50%);
+  color: white;
+  font-size: 40px;
+}
+.headermp {
+  font-size: 25px;
+}
+#stars5 {
+  height: 100px;
+  width: 350px;
+}
+.div {
+  display: -webkit-flex;
+  -webkit-align-items:center;
+  display: flex;
+  align-items: center;
+}
+.rowpad1 {
+  padding-top: 30%;
+}
+.rowpad2 {
+  padding-top: 0%;
+}
+.reviewbold {
+  font-weight: bold;
+  font-size: 30px;
+  padding-top: 1%;
+  padding-bottom: 2%;
+  text-align: center;
+}
+.reviewpara {
+  font-weight: bold;
+  font-size: 20px;
+  text-align: center;
+  padding-top: 3%;
+}
+.lotusOut {
+  border: 2px solid black;
+  border-radius: 50%;
+  height: 27px;
+  width: 45px;
+}
+/*
+.carousel-item{
+  background: transparent;
+}*/
+.carousel-content{
+  width: 100%;
+  margin: auto;
+  height: 225px;
+  color: black;
+  text-align:center;
+}
+.carousel-text {
+  padding-top: 100px;
+}
+.carousel-background {
+  margin: auto;
+  margin-top: 187px;
+  left:50%;
+  transform: translateX(-50%);
+  width: 80%;
+  position: absolute;
+  background-size: fill;
+  background-image: url("lotus-flower.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+}
+}
+@media screen and (min-width: 768px){
+  body, html {
+  height: 100%;
+  width: 100%;
+  overflow-x: hidden;
+  background: -webkit-radial-gradient(circle, black, #ffb5ff);
+}
+li {
+  display: inline;
+}
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+.navbar-purp {
+  background-color: #BB7BBB;
+  background-size: 50%;
+}
+.navbar-purp .navstyling {
+  color:white;
+  font-weight:bold;
+  text-shadow:2px 2px #070000;
+}
+.navbar-purp .navstyling:focus,
+.navbar-purp .navstyling:hover {
+  color: #E1D5EE;
+  background-color: rgba(0,0,0,0);
+}
+div.homebg {
+  background-image: url("lotus.jpeg");
+  height:100%;
+  position: relative;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+.dafoestyle {
+  position: absolute;
+  top:20%;
+  left:50%;
+  transform: translateX(-50%) translateY(-50%);
+  font-size: 70px;
+  color: #FF85FF;
+}
+.mrdafoe {
+  font-family: 'Mr Dafoe', cursive;
+}
+.roboto {
+  font-family: 'Roboto Slab', serif;
+}
+.titlebar {
+  display: block;
+  position: relative;
+  margin-top: 8%;
+  width: 85%;
+  height: 25%;
+  background-color: #FF85FF; 
+}
+.titlebar .titlestyling{
+
+  position: absolute;
+  top: 50%;
+  left: 28%;
+  transform: translateY(-50%);
+  color: white;
+  font-size: 40px;
+}
+.headermp {
+  font-size: 25px;
+}
+#stars5 {
+  height: 100px;
+  width: 350px;
+}
+.div {
+  display: -webkit-flex;
+  -webkit-align-items:center;
+  display: flex;
+  align-items: center;
+}
+.rowpad1 {
+  padding-top: 30%;
+}
+.rowpad2 {
+  padding-top: 0%;
+}
+.reviewbold {
+  font-weight: bold;
+  font-size: 30px;
+  padding-top: 1%;
+  padding-bottom: 2%;
+  text-align: center;
+}
+.reviewpara {
+  font-weight: bold;
+  font-size: 20px;
+  text-align: center;
+  padding-top: 3%;
+}
+.lotusOut {
+  border: 2px solid black;
+  border-radius: 50%;
+  height: 27px;
+  width: 45px;
+}
+/*
+.carousel-item{
+  background: transparent;
+}*/
+.carousel-content{
+  width: 100%;
+  margin: auto;
+  height: 225px;
+  color: black;
+  text-align:center;
+}
+.carousel-text {
+  padding-top: 100px;
+}
+.carousel-background {
+  margin: auto;
+  margin-top: 187px;
+  left:50%;
+  transform: translateX(-50%);
+  width: 80%;
+  position: absolute;
+  background-size: fill;
+  background-image: url("lotus-flower.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+}
+}
+@media screen and (min-width: 992px){
+  body, html {
+  height: 100%;
+  width: 100%;
+  overflow-x: hidden;
+  background: -webkit-radial-gradient(circle, black, #ffb5ff);
+}
+li {
+  display: inline;
+}
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+.navbar-purp {
+  background-color: #BB7BBB;
+  background-size: 50%;
+}
+.navbar-purp .navstyling {
+  color:white;
+  font-weight:bold;
+  text-shadow:2px 2px #070000;
+}
+.navbar-purp .navstyling:focus,
+.navbar-purp .navstyling:hover {
+  color: #E1D5EE;
+  background-color: rgba(0,0,0,0);
+}
+div.homebg {
+  background-image: url("lotus.jpeg");
+  height:100%;
+  position: relative;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+.dafoestyle {
+  position: absolute;
+  top:20%;
+  left:50%;
+  transform: translateX(-50%) translateY(-50%);
+  font-size: 70px;
+  color: #FF85FF;
+}
+.mrdafoe {
+  font-family: 'Mr Dafoe', cursive;
+}
+.roboto {
+  font-family: 'Roboto Slab', serif;
+}
+.titlebar {
+  display: block;
+  position: relative;
+  margin-top: 7%;
+  width: 85%;
+  height: 25%;
+  background-color: #FF85FF; 
+}
+.titlebar .titlestyling{
+
+  position: absolute;
+  top: 50%;
+  left: 28%;
+  transform: translateY(-50%);
+  color: white;
+  font-size: 50px;
+}
+.headermp {
+  font-size: 35px;
+}
+#stars5 {
+  height: 100px;
+  width: 350px;
+}
+.div {
+  display: -webkit-flex;
+  -webkit-align-items:center;
+  display: flex;
+  align-items: center;
+}
+.rowpad1 {
+  padding-top: 30%;
+}
+.rowpad2 {
+  padding-top: 0%;
+}
+.reviewbold {
+  font-weight: bold;
+  font-size: 30px;
+  padding-top: 1%;
+  padding-bottom: 2%;
+  text-align: center;
+}
+.reviewpara {
+  font-weight: bold;
+  font-size: 20px;
+  text-align: center;
+  padding-top: 3%;
+}
+.lotusOut {
+  border: 2px solid black;
+  border-radius: 50%;
+  height: 27px;
+  width: 45px;
+}
+/*
+.carousel-item{
+  background: transparent;
+}*/
+.carousel-content{
+  width: 100%;
+  margin: auto;
+  height: 225px;
+  color: black;
+  text-align:center;
+}
+.carousel-text {
+  padding-top: 100px;
+}
+.carousel-background {
+  margin: auto;
+  margin-top: 250px;
+  left:50%;
+  transform: translateX(-50%);
+  width: 80%;
+  position: absolute;
+  background-size: fill;
+  background-image: url("lotus-flower.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+}
+}
+@media screen and (min-width: 1200px){
+  body, html {
+  height: 100%;
+  width: 100%;
+  overflow-x: hidden;
+  background: -webkit-radial-gradient(circle, black, #ffb5ff);
+}
+li {
+  display: inline;
+}
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+.navbar-purp {
+  background-color: #BB7BBB;
+  background-size: 50%;
+}
+.navbar-purp .navstyling {
+  color:white;
+  font-weight:bold;
+  text-shadow:2px 2px #070000;
+}
+.navbar-purp .navstyling:focus,
+.navbar-purp .navstyling:hover {
+  color: #E1D5EE;
+  background-color: rgba(0,0,0,0);
+}
+div.homebg {
+  background-image: url("lotus.jpeg");
+  height:100%;
+  position: relative;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+.dafoestyle {
+  position: absolute;
+  top:20%;
+  left:50%;
+  transform: translateX(-50%) translateY(-50%);
+  font-size: 70px;
+  color: #FF85FF;
+}
+.mrdafoe {
+  font-family: 'Mr Dafoe', cursive;
+}
+.roboto {
+  font-family: 'Roboto Slab', serif;
+}
+.titlebar {
+  display: block;
+  position: relative;
+  margin-top: 7%;
+  width: 85%;
+  height: 25%;
+  background-color: #FF85FF; 
+}
+.titlebar .titlestyling{
+
+  position: absolute;
+  top: 50%;
+  left: 28%;
+  transform: translateY(-50%);
+  color: white;
+  font-size: 70px;
+}
+.headermp {
+  font-size: 35px;
+}
+#stars5 {
+  height: 100px;
+  width: 350px;
+}
+.div {
+  display: -webkit-flex;
+  -webkit-align-items:center;
+  display: flex;
+  align-items: center;
+}
+.rowpad1 {
+  padding-top: 30%;
+}
+.rowpad2 {
+  padding-top: 0%;
+}
+.reviewbold {
+  font-weight: bold;
+  font-size: 30px;
+  padding-top: 1%;
+  padding-bottom: 2%;
+  text-align: center;
+}
+.reviewpara {
+  font-weight: bold;
+  font-size: 20px;
+  text-align: center;
+  padding-top: 3%;
+}
+.lotusOut {
+  border: 2px solid black;
+  border-radius: 50%;
+  height: 27px;
+  width: 45px;
+}
+/*
+.carousel-item{
+  background: transparent;
+}*/
+.carousel-content{
+  width: 100%;
+  margin: auto;
+  height: 300px;
+  color: black;
+  text-align:center;
+}
+.carousel-text {
+  padding-top: 100px;
+}
+.carousel-background {
+  margin: auto;
+  margin-top: 300px;
+  left:50%;
+  transform: translateX(-50%);
+  width: 80%;
+  position: absolute;
+  background-size: fill;
+  background-image: url("lotus-flower.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+}
+}
+.navbar-toggle .icon-bar{background-color: white;}
+.navbar-toggle:hover{background: rgba(78.2, 77.2, 78.2, 0.35);}
+
+
+</style>
+
+<head>
+  <title>Reviews</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://fonts.googleapis.com/css?family=Mr+Dafoe" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="jquery.mobile.custom.min.js"></script>
+</head>
+
+<body>
+<nav class="navbar navbar-fixed-top ">
+  <div class="container navbar-purp">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span> 
+      </button>
+      <!--<a class="navbar-brand navstyling" href="#">Massage Poise</a>-->
+      <span class="mrdafoe headermp"styling="color:black;">Massage Poise</span>
+    <div class="collapse navbar-collapse navbar-right" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li><a class="navstyling" href="index.html#">Home</a></li>
+        <li class="active"><a class="navstyling" href="#">Reviews</a></li>
+        <li><a class="navstyling" href="packages.html#">Packages</a></li> 
+        <li><a class="navstyling" href="contact.html#">Contact Us</a></li> 
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="container-fluid titlebar pull-right">
+
+  <div class="titlestyling roboto">Reviews</div>
+</div>
+
+<script>
+  $(document).ready(function() {  
+       $("#myCarousel").swiperight(function() {  
+          $(this).carousel('prev');  
+          });  
+       $("#myCarousel").swipeleft(function() {  
+          $(this).carousel('next');  
+     });  
+  });  
+</script>
+
+<div class="carousel-background">
+  <div id="myCarousel" class="carousel slide" data-ride="carousel">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+      <li data-target="#myCarousel" data-slide-to="2"></li>
+      <li data-target="#myCarousel" data-slide-to="3"></li>
+      <li data-target="#myCarousel" data-slide-to="4"></li>
+      <li data-target="#myCarousel" data-slide-to="5"></li>
+      <li data-target="#myCarousel" data-slide-to="6"></li>
+    </ol>
+
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner" role="listbox">
+
+      <div class="carousel-item item active">
+        <div class="carousel-content">
+          <h2 class="carousel-text">Hey There!</h2>
+        </div>
+              </div>
+
+      <div class="carousel-item item">
+        <div class="carousel-content">
+          <h2 class="carousel-text">sjhdida</h2>
+        </div>
+       
+      </div>
+    
+      <div class="carousel-item item">
+        <div class="carousel-content">
+          <h2 class="carousel-text">sjhdida</h2>
+        </div>
+      </div>
+
+      <div class="carousel-item item">
+       <div class="carousel-content">
+          <h2 class="carousel-text">sjhdida</h2>
+        </div>
+        
+      </div>
+
+      <div class="carousel-item item">
+        <div class="carousel-content">
+          <h2 class="carousel-text">sjhdida</h2>
+        </div>
+        
+      </div>
+
+      <div class="carousel-item item">
+        <div class="carousel-content">
+          <h2 class="carousel-text">sjhdida</h2>
+        </div>
+        
+      </div>
+
+      <div class="carousel-item item">
+        <div class="carousel-content">
+          <h2 class="carousel-text">sjhdida</h2>
+        </div>
+        
+      </div>
+  
+    </div>
+
+
+    <!-- Left and right controls -->
+    <a class="carousel-control-prev" href="#myCarousel" data-slide="prev">
+      <span class="carousel-control-prev-icon"></span>
+    </a>
+    <a class="carousel-control-next" href="#myCarousel" data-slide="next">
+      <span class="carousel-control-next-icon"></span>
+    </a>
+  </div>
+</div>
+</body>
+</html>
